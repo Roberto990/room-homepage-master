@@ -1,14 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css">
-        <title>Document</title>
-    </head>
-    <body>
-        <main></main>
-        <script src="js/script.js"></script>
-        <footer></footer>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="menum mobile">
+            <div class="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                    
+                <ul id="menu">
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Info</li></a>
+                    <a href="#"><li>Contact</li></a>
+                </ul>
+            </div>     
+        </div>
+        
+        <div class="menu">
+            
+            <ul>
+                <li><a href="#"><img src="images/logo.svg" alt="Logo Room"></a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">shop</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <div class="top" id="top">
+            <div class="left-top fade">
+                <div class="buttons mobile">
+                        <a href="#" onclick="changeleft();" id="change"><button><img src="images/icon-angle-left.svg" alt="Arrow Left"></button></a>
+                        <a href="#" onclick="changeright();" id="change"><button><img src="images/icon-angle-right.svg" alt="Arrow Right"></button></a>
+                </div>
+            </div>
+            <div class="right-top">
+                <div class="content-right-top">
+                    <h1>Discover innovative ways to decorate</h1>
+                    <p>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
+                    
+                    
+                    <button class="shopnow">
+                       <a href="#"><span>SHOP NOW</span>
+                       <img src="images/icon-arrow.svg"></a>
+                    </button>
+                   
+                    <div class="buttons">
+                        <a href="#" onclick="changeleft();" id="change"><button><img src="images/icon-angle-left.svg" alt="Arrow Left"></button></a>
+                        <a href="#" onclick="changeright();" id="change"><button><img src="images/icon-angle-right.svg" alt="Arrow Right"></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom">
+            <div class="bottom-left"></div>
+            <div class="bottom-center">
+                <div class="content-center-bottom">
+                    <h5>ABOUT OUR FURNITURE</h5>
+                    <p>Our multifunctional collection blens design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interestes and what inspires you. Find the furnitur pieces you need, from traditional to cotemporary styles or anything in between. Product specialits are available to help you create your dreams space.</p>
+                </div>
+            </div>
+            <div class="bottom-right"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
 </html>

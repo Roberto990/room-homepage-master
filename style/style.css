@@ -1,4 +1,223 @@
-*, ::after, ::before {
-    box-sizing: content-box;
-    margin:0;
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade {
+  -webkit-animation: fade 0.5s;
+  animation: fade 0.5s ease-in-out;
+  transition: background-image 0.5s;
+}
+
+*,
+::after,
+::before {
+  box-sizing: content-box;
+  margin: 0;
+}
+
+.mobile {
+  display: none;
+}
+
+.menu {
+  width: 30vw;
+  position: absolute;
+  top: 8%;
+  left: 1%;
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  list-style-type: none;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.menu ul li {
+  padding-bottom: 5px;
+}
+.menu ul li:first-of-type:hover {
+  border: none;
+}
+.menu ul li:hover {
+  border-bottom: 2px solid white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70vh;
+}
+.top .left-top {
+  background-image: url(../images/desktop-image-hero-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 60vw;
+}
+.top .right-top {
+  position: relative;
+  width: 40vw;
+  margin-top: 10%;
+}
+.top .right-top .content-right-top {
+  padding-left: 20%;
+  padding-right: 23%;
+}
+.top .right-top .content-right-top h1 {
+  font-family: "Spartan", sans-serif;
+  font-size: 2.25em;
+  font-weight: 700;
+  padding-bottom: 8%;
+}
+.top .right-top .content-right-top p {
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  color: #a1a1a1;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.5em;
+  padding-bottom: 10%;
+}
+.top .right-top .content-right-top .shopnow {
+  background-color: white;
+  border: 0;
+  outline: 0;
+  margin: 0;
+}
+.top .right-top .content-right-top .shopnow a {
+  text-decoration: none;
+  color: black;
+}
+.top .right-top .content-right-top .shopnow a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #454545;
+}
+.top .right-top .content-right-top .shopnow span {
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 10px;
+  padding-right: 30px;
+  padding-left: 0;
+}
+.top .right-top .content-right-top .buttons {
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+  width: 30vw;
+  margin-left: 1px;
+}
+.top .right-top .content-right-top .buttons button {
+  padding: 6% 7.1% 6% 7.1%;
+  border: 0;
+  outline: 0;
+  background-color: black;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.top .right-top .content-right-top .buttons button:hover {
+  cursor: pointer;
+  background-color: #454545;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.top .right-top .content-right-top .buttons button:last-child {
+  margin-left: -4px;
+}
+
+.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100vw;
+  height: 30vh;
+}
+.bottom .bottom-left {
+  background-image: url("../images/image-about-dark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30vw;
+}
+.bottom .bottom-center {
+  width: 40vw;
+}
+.bottom .bottom-center .content-center-bottom {
+  padding-top: 13%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.bottom .bottom-center .content-center-bottom h5 {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  letter-spacing: 6px;
+  padding-bottom: 2%;
+}
+.bottom .bottom-center .content-center-bottom p {
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  color: #a1a1a1;
+  line-height: 17px;
+}
+.bottom .bottom-right {
+  background-image: url("../images/image-about-light.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30vw;
+}
+
+@media screen and (max-width: 1440px) {
+  .buttons button {
+    padding: 6% 6.7% 6% 6.7% !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .top {
+    display: block;
+    height: auto;
+  }
+  .top .left-top {
+    display: block;
+    width: 100vw;
+    height: 40vh;
+    background-image: url("../images/mobile-image-hero-1.jpg");
+  }
+  .top .left-top .buttons {
+    display: contents;
+  }
+  .top .right-top {
+    width: 100wv;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

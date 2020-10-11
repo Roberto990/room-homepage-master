@@ -1,0 +1,284 @@
+$darkgray: hsl(0, 0%, 63%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$verydarkgray: hsl(0, 0%, 27%);
+
+$font: 'Spartan',
+sans-serif;
+$bodysize: 12px;
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    -webkit-animation: fade .5s;
+    animation: fade .5s ease-in-out;
+    transition: background-image .5s;
+}
+
+
+
+*,
+::after,
+::before {
+    box-sizing: content-box;
+    margin: 0;
+}
+
+.mobile {
+    display:none;
+}
+.menu {
+
+    width: 30vw;
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    font-family: $font;
+    font-size: $bodysize;
+    font-weight: 600;
+
+
+    ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        list-style-type: none;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    ul li {
+        padding-bottom: 5px;
+
+        &:first-of-type {
+            &:hover {
+                border: none;
+            }
+        }
+
+        &:hover {
+            border-bottom: 2px solid $white;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: $white;
+    }
+
+}
+
+
+.top {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 70vh;
+
+    .left-top {
+        background-image: url(../images/desktop-image-hero-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 60vw;
+    }
+
+    .right-top {
+
+        position: relative;
+        width: 40vw;
+        margin-top: 10%;
+
+        .content-right-top {
+
+            padding-left: 20%;
+            padding-right: 23%;
+
+            h1 {
+                font-family: $font;
+                font-size: 2.25em;
+                font-weight: 700;
+                padding-bottom: 8%;
+            }
+
+            p {
+                font-family: $font;
+                font-size: $bodysize;
+                color: $darkgray;
+                font-weight: 500;
+                text-align: justify;
+                line-height: 1.5em;
+                padding-bottom: 10%;
+            }
+
+            .shopnow {
+
+                background-color: white;
+                border: 0;
+                outline: 0;
+                margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: $black;
+
+                    &:hover {
+                        -webkit-transition: .5s;
+                        transition: .5s;
+                        color: $verydarkgray;
+                    }
+                }
+
+                span {
+                    font-family: $font;
+                    font-size: $bodysize;
+                    font-weight: 500;
+                    letter-spacing: 10px;
+                    padding-right: 30px;
+                    padding-left: 0;
+                }
+            }
+
+            .buttons {
+                position: absolute;
+                bottom: 0;
+                left: 3px;
+                width: 30vw;
+                margin-left: 1px;
+
+                button {
+                    padding: 6% 7.1% 6% 7.1%;
+                    border: 0;
+                    outline: 0;
+                    background-color: $black;
+                    -webkit-transition: background-color .5s;
+                    transition: background-color .5s;
+                }
+
+                button:hover {
+                    cursor: pointer;
+                    background-color: $verydarkgray;
+                    -webkit-transition: background-color .5s;
+                    transition: background-color .5s;
+                }
+
+                button:last-child {
+                    margin-left: -4px;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+.bottom {
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100vw;
+    height: 30vh;
+
+    .bottom-left {
+        background-image: url('../images/image-about-dark.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 30vw;
+    }
+
+    .bottom-center {
+
+        width: 40vw;
+
+        .content-center-bottom {
+            padding-top: 13%;
+            padding-left: 7%;
+            padding-right: 7%;
+
+            h5 {
+                font-family: $font;
+                font-weight: 700;
+                letter-spacing: 6px;
+                padding-bottom: 2%;
+            }
+
+            p {
+                font-family: $font;
+                font-size: $bodysize;
+                color: $darkgray;
+                line-height: 17px;
+            }
+        }
+
+    }
+
+    .bottom-right {
+        background-image: url('../images/image-about-light.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .buttons {
+        button {
+            padding: 6% 6.7% 6% 6.7% !important;     
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .top {
+        
+        display:block;
+        height:auto;
+        
+        .left-top {
+            display:block;
+            width:100vw;
+            height:40vh;
+            background-image:url("../images/mobile-image-hero-1.jpg");
+            
+            .buttons {
+                display:contents;
+            }
+        }
+        
+        .right-top {
+            width:100wv;
+        }
+    }
+}
